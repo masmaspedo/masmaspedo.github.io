@@ -1,0 +1,133 @@
+@mixin font($font-family,$font-file){
+    @font-face {
+        font-family: $font-family;
+        src: url($font-file);
+    }
+}
+
+@include font('Mageelang','/static/font/Mageelang.ttf');
+@include font('Fratto','/static/font/Fratto.ttf');
+@include font('Kuliwah','/static/font/Kuliwah.ttf');
+
+@import '~bootstrap/scss/bootstrap.scss';
+
+/**
+* Copyright (c) Masmaspedo
+* This is for my portofolio
+*
+*/
+
+// Headers
+
+.bg-glassy {
+    backdrop-filter: blur(10px);
+    background-color: rgba(0,0,0,0.8);
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 10px 12px;
+}
+
+#mainPages {
+    margin-top: -65px;
+}
+
+.nav-item > a {
+    color : #fff!important;
+    font-family: 'Kuliwah';
+    font-size: 21px;
+    font-weight: 600;
+}
+
+// HERO
+.homeHero {
+    min-height: fit-content;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+}
+.homeHero::before{
+    content: "";
+    position: absolute;
+    top : 0;
+    bottom : 0;
+    left : 0;
+    right: 0;
+
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.bg-hero-profile {
+    background: url('/static/img/bg.png');
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#particles-js{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.captions {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+}
+
+.title-right{
+    display: inline-block;
+    padding-right: 20px;
+    color: #fff;
+}
+.title-right > h1{
+    font-size: 175px;
+    font-weight: 600;
+    font-family: 'Kuliwah';
+}
+
+.title-left{
+    display: inline-block;
+    text-align: left;
+    padding-left: 20px;
+    position: relative;
+    color: rgb(247, 3, 3);
+    text-transform: uppercase;
+}
+
+.title-left {
+    font-weight: 600;
+    font-family: 'Kuliwah';
+}
+
+.title-left::before{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    height: 89%;
+    width: 10px;
+    background: #fff;
+}
+
+.title-left > h4{
+    color: #fff;
+    display: inline-block;
+}
+
+.typing {
+    color : #fff;
+    display: inline-block;
+    font-size: 20px;
+    font-family: 'Kuliwah';
+}
+
+.typed-cursor{
+    color: rgb(58, 190, 230);
+}
